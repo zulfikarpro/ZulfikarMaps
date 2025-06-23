@@ -1,3 +1,24 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-native",
+    "lib": ["dom", "esnext"],
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "composite": true,
+    "declaration": true,
+    "disableSizeLimit": true,
+    "baseUrl": "./",
+    "paths": {
+      "@assets": ["./assets/index.ts"],
+      "@assets/*": ["assets/*"],
+      "@pages/*": ["src/pages/*"],
+      "@navigation/*": ["src/navigation/*"],
+      "@components/*": ["src/components/*"],
+      "@slices/*": ["src/slices/*"],
+      "@store/*": ["src/store/*"],
+      "@hooks/*": ["src/hooks/*"]
+    }
+  }
 }
